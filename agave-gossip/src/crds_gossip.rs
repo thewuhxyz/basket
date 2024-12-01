@@ -349,7 +349,7 @@ pub(crate) fn get_gossip_nodes<R: Rng>(
                     .map(|addr| socket_addr_space.check(&addr))
                     .unwrap_or_default()
                 && match gossip_validators {
-                    Some(nodes) => nodes.contains(node.pubkey()),
+                    Some(nodes) => nodes.contains(&node.pubkey()),
                     None => true,
                 }
         })

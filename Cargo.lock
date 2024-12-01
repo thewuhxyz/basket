@@ -2327,6 +2327,7 @@ checksum = "707907fe3c25f5424cce2cb7e1cbcafee6bdbe735ca90ef77c29e84591e5b9da"
 dependencies = [
  "equivalent",
  "hashbrown 0.15.1",
+ "rayon",
 ]
 
 [[package]]
@@ -5947,6 +5948,7 @@ dependencies = [
  "itertools 0.12.1",
  "log",
  "percentage",
+ "qualifier_attr",
  "serde",
  "serde_derive",
  "solana-bpf-loader-program",
