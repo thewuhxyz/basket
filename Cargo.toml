@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [workspace]
-members = ["gossip", "gossip-2", "agave-gossip"]
+members = ["gossip", "agave-gossip"]
 
 [workspace.dependencies]
 basket-gossip = { path = "./gossip"}

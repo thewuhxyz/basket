@@ -1780,23 +1780,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "gossip"
-version = "0.1.0"
-dependencies = [
- "bincode",
- "indexmap 2.6.0",
- "lru 0.12.5",
- "serde",
- "solana-gossip",
- "solana-logger",
- "solana-net-utils",
- "solana-sdk",
- "solana-streamer",
- "solana-version",
- "thiserror 1.0.69",
-]
-
-[[package]]
 name = "governor"
 version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
