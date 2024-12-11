@@ -1,9 +1,9 @@
 use {
     solana_gossip::{
         gossip_service::discover,
-        contact_info::ContactInfo,
+        // contact_info::ContactInfo,
     },
-    solana_sdk::signature::Keypair,
+    // solana_sdk::signature::Keypair,
     solana_streamer::socket::SocketAddrSpace,
     std::{
         net::{SocketAddr, TcpStream, ToSocketAddrs},
@@ -61,7 +61,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     solana_logger::setup_with_default("solana_gossip=debug");
 
     let entrypoints = [
-        ("mainnet", "34.83.231.147:8001"),
+        ("mainnet", "34.83.231.102:8001"),
         ("testnet", "35.203.170.30:8001"),
     ];
 
@@ -79,7 +79,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         // Test UDP socket
         println!("Testing UDP socket...");
         let socket = std::net::UdpSocket::bind("0.0.0.0:0")?;
-        socket.connect(&entrypoint)?;
+        socket.connect(entrypoint)?;
         println!("Successfully connected UDP socket to {}", entrypoint);
 
         // Get the cluster's shred version
